@@ -10,19 +10,23 @@ import {
   Text,
   View
 } from 'react-native';
-
+const Realm=require('realm')
 class RealmDemo extends Component {
   render() {
+    let realm = new Realm({
+     schema: [{name: 'Dog', properties: {name: 'string'}}]
+     });
+
+    realm.write(() => {
+      realm.create('Dog', {name: 'Rex'});
+    });
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
-          Welcome to React Native!
+           Realm基础使用实例
         </Text>
         <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Shake or press menu button for dev menu
+           Count of Dogs in Realm: {realm.objects('Dog').length}
         </Text>
       </View>
     );
