@@ -39,4 +39,13 @@ public class MainActivity extends ReactActivity {
             new RealmReactPackage()
         );
     }
+    /**
+   * Returns the name of the main module. Determines the URL used to fetch the JS bundle
+   * from the packager server. It is only used when dev support is enabled.
+   * This is the first file to be executed once the {@link ReactInstanceManager} is created.
+   * e.g. "index.android"
+   */
+  protected String getJSMainModuleName() {
+    return "realm_models";
+  }
 }

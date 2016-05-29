@@ -21,7 +21,7 @@ class RealmDemo extends Component {
       realm.create('Dog', {name: 'Rex'});
     });
     return (
-      <View style={styles.container}>
+      <View style={{marginTop:20}}>
         <Text style={styles.welcome}>
            Realm基础使用实例-iOS版本
         </Text>
@@ -32,14 +32,7 @@ class RealmDemo extends Component {
     );
   }
 }
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
