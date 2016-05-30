@@ -46,6 +46,6 @@ public class MainActivity extends ReactActivity {
    * e.g. "index.android"
    */
   protected String getJSMainModuleName() {
-    return "realm_models";
+    return "realm_write_or_query";
   }
 }
